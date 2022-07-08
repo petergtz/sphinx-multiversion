@@ -272,6 +272,8 @@ def main(argv=None):
             project = sphinx_project.Project(
                 current_sourcedir, source_suffixes
             )
+            current_config.version = gitref.name
+
             metadata[gitref.name] = {
                 "name": gitref.name,
                 "version": current_config.version,
